@@ -6,6 +6,8 @@ import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
 
+import LogoTipoLight from '../../../image/LogotipoLight_mode.png'
+
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
@@ -26,10 +28,17 @@ export default function Login({ status, canResetPassword }) {
             <Head title="Log in" />
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
-
+            <div className='flex justify-center'>
+           <img src={LogoTipoLight} className='pb-10 size-2/3 ' />
+           </div>
+           <div className='flex pb-4 text-orange-600 font-bold'>
+           <h1>Inicia Sesión</h1>
+           </div>
             <form onSubmit={submit}>
+                
                 <div >
-                    <InputLabel className="block text-gray-600 pb-2 "htmlFor="email" value="Correo Electronico" />
+                    
+                    <InputLabel className="block text-blue-900 pb-2 font-semibold "htmlFor="email" value="Correo Electrónico" />
 
                     <TextInput
                         id="email"
@@ -45,7 +54,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.email} className="mt-2" />
                 </div>
 
-                <div className="mt-4 ">
+                <div className="mt-4 font-semibold">
                     <InputLabel htmlFor="password" value="Contraseña" />
 
                     <TextInput
@@ -69,25 +78,32 @@ export default function Login({ status, canResetPassword }) {
                             onChange={(e) => setData('remember', e.target.checked)}
                         />
                         <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">Recuerdame</span>
+                        
                     </label>
                 </div>
 
                 <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                        >
-                            ¿Olvidaste la contraseña?
-                        </Link>
-                    )}
+                    
 
                     <PrimaryButton className="ms-4 bg-orange-500" disabled={processing}>
                     Iniciar Sesión
                     </PrimaryButton>
+                    
                 </div>
-                <p className="pb-2">Copyright. All Rights Reserved</p>
+                <div className='text-right pt-3'>
+                        {canResetPassword && (
+                        <Link
+                            href={route('password.request')}
+                            className=" underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 dark:focus:ring-offset-gray-800"
+                        >
+                            ¿Olvidaste la contraseña?
+                        </Link>
+                    )}
+                    </div>
+                <div className='text-right text-xs pt-5'>
+                <p className="pb-2 pt-3">Copyright. All Rights Reserved</p>
             <p>El contenido de las páginas de esta plataforma web sólo es informativo.Puede estar sujeto a cambios sin previo aviso</p>
+            </div>
             </form>
         </GuestLayout>
     );
