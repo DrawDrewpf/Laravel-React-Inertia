@@ -54,7 +54,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.email} className="mt-2" />
                 </div>
 
-                <div className="mt-4 font-semibold">
+                <div className="mt-8 font-semibold">
                     <InputLabel htmlFor="password" value="Contraseña" />
 
                     <TextInput
@@ -70,7 +70,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="block mt-4">
+                <div className="block mt-8">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"
