@@ -5,7 +5,7 @@ import LogoDark from '../../image/LogotipoDark_mode.png';
 
 export default function Guest({ children }) {   
     return (
-        <div className=" flex justify-center items-center h-screen">
+        <div className=" flex justify-center items-center h-screen dark:bg-gray-400">
             <div>
                 <div className=" h-screen hidden lg:block relative">
                 <div class="absolute inset-0 bg-black opacity-50 rounded-r-2xl"></div>

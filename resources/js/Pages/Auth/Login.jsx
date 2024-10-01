@@ -45,7 +45,7 @@ export default function Login({ status, canResetPassword }) {
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full border-blue-900"
+                        className="mt-1 block w-full border-blue-900 dark:bg-gray-400"
                         autoComplete="username"
                         isFocused={true}
                         onChange={(e) => setData('email', e.target.value)}
