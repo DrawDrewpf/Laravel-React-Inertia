@@ -2,7 +2,7 @@ export default function ColonButton() {
     return (
         <button>
             <div
-                class=" ] relative w-[180px] h-[100px] bg-gray-100 font-['Open_Sans'] border-b-2 rounded-xl">
+                class=" ] relative w-[180px] h-[100px] bg-gray-50 font-['Open_Sans'] border-b-2 rounded-xl">
 
                 <p class="m-[5px]  text-blue-900 font-bold ">Documentación</p>
 

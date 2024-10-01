@@ -13,6 +13,17 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                orange: {
+                    light: '#f8e2c2', // Naranja claro para el tema claro
+                    DEFAULT: '#f39c12', // Naranja por defecto (tema claro)
+                    dark: '#d35400', // Naranja oscuro para el tema oscuro
+                },
+                white: {
+                    light: '#ffffff', // Blanco para el tema claro
+                    dark: '#cccccc', // Blanco grisáceo para el tema oscuro
+                },
+            },
             fontFamily: {
                 sans: ['Open_Sans','Figtree', ...defaultTheme.fontFamily.sans],
                 montserrat: ['"Montserrat"', 'sans-serif'],

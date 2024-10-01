@@ -5,7 +5,7 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
-
+import LogoTipoDark from '../../../image/LogotipoDark_mode.png'
 import LogoTipoLight from '../../../image/LogotipoLight_mode.png'
 
 export default function Login({ status, canResetPassword }) {
@@ -29,7 +29,7 @@ export default function Login({ status, canResetPassword }) {
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
             <div className='flex justify-center'>
-           <img src={LogoTipoLight} className='pb-10 size-2/3 ' />
+           <img src={LogoTipoDark} className='pb-10 size-2/3 ' />
            </div>
            <div className='flex pb-4 text-orange-600 font-bold'>
            <h1>Inicia Sesión</h1>
@@ -85,7 +85,7 @@ export default function Login({ status, canResetPassword }) {
                 <div className="flex items-center justify-end mt-4">
                     
 
-                    <PrimaryButton className="ms-4 bg-orange-500" disabled={processing}>
+                    <PrimaryButton className="ms-4 bg-orange-light" disabled={processing}>
                     Iniciar Sesión
                     </PrimaryButton>
                     
